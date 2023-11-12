@@ -47,6 +47,7 @@ RUN git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 RUN git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 RUN echo 'eval "$(~/.rbenv/bin/rbenv init - bash)"' >> /etc/profile.d/rbenv
 RUN echo 'eval "$(~/.rbenv/bin/rbenv init - bash)"' >> ~/.bashrc
+RUN source ~/.bashrc
 
 # Install ruby.
 RUN rbenv install ${RUBY_VERSION}
